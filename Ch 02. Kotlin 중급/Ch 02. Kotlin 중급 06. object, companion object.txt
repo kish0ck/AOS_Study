@@ -1,0 +1,55 @@
+/**
+ * 2026-01-18
+ * Part 0.안드로이드 앱 개발 시작에 앞서
+ * Ch 02. Kotlin 중급 
+ * 06. object, companion object
+ */
+fun main() {
+    /*
+     * Chapter6. Object, Companion object
+     * 
+     * Object : 클래스를 정의함과 동시에 객체를 생성
+     *  - 싱글톤을 쉽게 만들 수 있는 키워드
+     *  - 생성자 사용 불가
+     *  - 프로퍼티, 메서드, 초기화 블록은 사용 가능
+     *  - 다른 클래스나, 인터페이스를 상속받을 수 있음
+     * Compaion Object 동반객체
+     *  - Java의 static과 동일한 역할
+     *  - 클래스 내에 하나만 생성할 수 있음
+     * */
+	Counter
+    println(Counter.count)
+    
+    Counter.countUp()
+    Counter.countUp()
+    
+    println(Counter.count)
+    Counter.hello();
+    println(Book.NAME);
+    
+    
+    
+}
+
+object Counter : Hello() {
+	init {
+        println("카운터 초기화")
+    }
+    var count = 0
+    fun countUp(){
+        count++
+    }
+}
+
+
+open class Hello(){
+    fun hello() = println("Hello")
+}
+
+class Book {
+    
+    companion object Novel{
+		const val NAME = "name"
+        fun create() = Book()
+    }
+}
