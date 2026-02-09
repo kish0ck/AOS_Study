@@ -1,18 +1,26 @@
 package fastcampus.part1.chapter3
 
 import android.os.Bundle
+<<<<<<< HEAD
 import android.os.PersistableBundle
 import android.util.Log
+=======
+>>>>>>> d23b6630daa1788562fc6ce449eca4e0a6e923ba
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+<<<<<<< HEAD
 import androidx.core.widget.addTextChangedListener
 import fastcampus.part1.chapter3.databinding.ActivityMainBinding
 
 private var cmToM: Boolean = true
 
+=======
+import fastcampus.part1.chapter3.databinding.ActivityMainBinding
+
+>>>>>>> d23b6630daa1788562fc6ce449eca4e0a6e923ba
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
 
@@ -26,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         val outputUnitTextView = binding.outputUnitTextView
         val inputEditText = binding.inputEditText
         val inputUnitTextView = binding.inputUnitTextView
+<<<<<<< HEAD
         val swapImageButton = binding.swapImageButton
 
         var inputNumber:Int = 0
@@ -73,5 +82,9 @@ class MainActivity : AppCompatActivity() {
         binding.inputUnitTextView.text = if(cmToM) "cm" else "m"
         binding.outputUnitTextView.text = if(cmToM) "m" else "cm"
         super.onRestoreInstanceState(savedInstanceState)
+=======
+
+
+>>>>>>> d23b6630daa1788562fc6ce449eca4e0a6e923ba
     }
 }
